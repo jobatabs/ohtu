@@ -1,5 +1,5 @@
 import unittest
-from statistics_service import StatisticsService
+from statistics_service import StatisticsService, SortBy
 from player import Player
 
 
@@ -39,3 +39,15 @@ class TestStatisticsService(unittest.TestCase):
     def test_top_dog(self):
         reply = self.stats.top(0)
         self.assertEqual(str(reply[0]), "Gretzky EDM 35 + 89 = 124")
+    
+    def test_top_points(self):
+        reply = self.stats.top(0, SortBy.POINTS)
+        self.assertEqual(str(reply[0]), "Gretzky EDM 35 + 89 = 124")
+    
+    def test_top_assists(self):
+        reply = self.stats.top(0, SortBy.ASSISTS)
+        self.assertEqual(str(reply[0]), "Gretzky EDM 35 + 89 = 124")
+    
+    def test_top_goals(self):
+        reply = self.stats.top(0, SortBy.GOALS)
+        self.assertEqual(str(reply[0]), "Lemieux PIT 45 + 54 = 99")
