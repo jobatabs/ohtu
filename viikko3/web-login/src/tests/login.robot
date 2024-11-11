@@ -42,9 +42,3 @@ Set Username
 Set Password
     [Arguments]  ${password}
     Input Password  password  ${password}
-
-*** Keywords ***
-Reset Application Create User And Go To Login Page
-    Reset Application
-    Create User  kalle  kalle123
-    Go To Login Page
