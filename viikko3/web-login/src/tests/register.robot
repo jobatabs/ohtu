@@ -48,6 +48,32 @@ Register With Username That Is Already In Use
     Submit Credentials
     Register Should Fail With Message    User with username kalle already exists
 
+Login After Successful Registration
+    Set Username  kal
+    Set Password  salasan4
+    Set Password Confirmation    salasan4
+    Submit Credentials
+    Register Should Succeed
+    Click Link    Continue to main page
+    Click Button    Logout
+    Set Username    kal
+    Set Password    salasan4
+    Click Button    Login
+    Main Page Should Be Open
+
+Login After Failed Registration
+    Set Username  kal
+    Set Password  salasana
+    Set Password Confirmation    salasana
+    Submit Credentials
+    Click Link    Login
+    Set Username    kal
+    Set Password    salasana
+    Click Button    Login
+    Login Page Should Be Open
+    Page Should Contain    Invalid username or password
+
+
 *** Keywords ***
 Register Should Succeed
     Welcome Page Should Be Open
