@@ -1,4 +1,4 @@
 # ohtu
 
-https://github.com/jobatabs/ohtuvarasto
-https://github.com/jobatabs/webcounter
+[ohtuvarasto](https://github.com/jobatabs/ohtuvarasto)
+[webcounter](https://github.com/jobatabs/webcounter)
